@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Generar Contrato</title>
+</head>
+<link rel="stylesheet" href="estilo.css">
+<body>
+  <h1>Formulario de Contrato</h1>
+
+  <form id="contratoForm">
+
+    <h3>Datos del LOCADOR</h3>
+    <label>Nombre: <input type="text" name="nombre_locador" value="Jimena Alejandra Lopez"></label><br>
+    <label>Nacionalidad: <input type="text" name="nacionalidad_locador" value="Argentina"></label><br>
+    <label>DNI: <input type="text" name="dni_locador" value="25934974"></label><br>
+    <label>CUIL: <input type="text" name="cuil_locador" value="27-25934974-0"></label><br>
+    <label>Dirección: <input type="text" name="direccion_locador" value="Crisol 266 Dto 7A"></label><br>
+    <label>Localidad: <input type="text" name="localidad_locador" value="Nueva Córdoba"></label><br>
+    <label>Provincia: <input type="text" name="provincia_locador" value="Córdoba"></label><br>
+    <label>Mail: <input type="text" name="mail_locador" value="pepito@gmail.com"></label><br>
+
+    <h3>Datos del LOCATARIO</h3>
+    <label>Nombre: <input type="text" name="nombre_inquilino" value="Alberto Fabian Dominguez"></label><br>
+    <label>Nacionalidad: <input type="text" name="nacionalidad_inquilino" value="Argentina"></label><br>
+    <label>DNI: <input type="text" name="dni_inquilino" value="20500607"></label><br>
+    <label>CUIL: <input type="text" name="cuil_inquilino" value="23-20500607-9"></label><br>
+    <label>Dirección: <input type="text" name="direccion_inquilino" value="Puerto Español 666"></label><br>
+    <label>Ciudad: <input type="text" name="ciudad_inquilino" value="Ushuaia"></label><br>
+    <label>Provincia: <input type="text" name="provincia_inquilino" value="Tierra del Fuego"></label><br>
+    <label>Mail: <input type="text" name="mail_inquilino" value="pepito@gmail.com"></label><br>
+
+    <h3>Datos del INMUEBLE</h3>
+    <label>Dirección: <input type="text" name="direccion_inmueble" value="Primer Argentino 1456"></label><br>
+    <label>Ciudad: <input type="text" name="ciudad_inmueble" value="Ushuaia"></label><br>
+    <label>Provincia: <input type="text" name="provincia_inmueble" value="Tierra del Fuego"></label><br>
+    <label>Descripción: <input type="text" name="descripcion_inmueble" value="casa de tres habitaciones, un baño, cocina comedor"></label><br>
+    <label>Marca de pintura: <input type="text" name="marca_pintura" value="Latex Profesional X"></label><br>
+    <label>Uso: <input type="text" name="uso_inmueble" value="vivienda personal"></label><br>
+    <label>Cantidad de personas: <input type="text" name="cantidad_personas" value="3"></label><br>
+
+    <h3>Vigencia</h3>
+    <label>Plazo (en letras): <input type="text" name="plazo_escrito" value="dos"></label><br>
+    <label>Plazo (numérico): <input type="text" name="plazo_numerico" value="2"></label><br>
+    <label>Fecha de inicio: <input type="date" name="fecha_inicio" value="2025-07-01"></label><br>
+    <label>Fecha de fin: <input type="date" name="fecha_fin" value="2027-06-30"></label><br>
+
+    <h3>Precio</h3>
+    <label>Precio(en letras): <input type="text" name="precio_escrito" value="un millon de pesos argentinos"></label><br>
+    <label>Precio(numerico): <input type="text" name="precio_numerico" value="1.000.000"></label><br>
+    <label>Tiempo del primer precio(en letras): <input type="text" name="tiempo_precio_escrito" value="tres"></label><br>
+    <label>Tiempo del primer precio(numerico): <input type="text" name="tiempo_precio_numerico" value="3"></label><br>
+    <label>Fecha que termina el primer monto del alquiler: <input type="date" name="fecha_final_1er_precio" value="31-10-2025"></label><br>
+    <label>Fecha que inicia el primer aumento de alquiler(un dia despues): <input type="date" name="fecha_actualizacion_alquiler" value="01-11-2025"></label><br>
+    <label>Tipo de actualizacion(cuatri-tri-bi-etc): <input type="text" name="tipo_actualizacion" value="cuatrimestralmente"></label><br>
+    <label>0,5% del total del alquiler(en letras): <input type="text" name="precio_cerocinco_letra" value="un millon de pesos argentinos"></label><br>
+    <label>0,5% del total del alquiler(numerico): <input type="text" name="precio_cerocinco_num" value="500.000"></label><br>
+    <label>total del alquiler(en letras): <input type="text" name="precio_total_letra" value="un millon de pesos argentinos"></label><br>
+    <label>total del alquiler(numerico): <input type="text" name="precio_total_num" value="500.000"></label><br>
+
+    <h3>Forma de pago</h3>
+
+    <h3>Pago y deposito en garantia</h3>
+    <label>Mes de contrato(escrito): <input type="text" name="mes_escrito" value="ENERO"></label><br>
+    <label>AÑo de contrato(numerico): <input type="text" name="anio_inicio_escrito" value="2025"></label><br>
+
+    <h3>Fiadores</h3>
+    <label>Sexo del primer fiador: <input type="text" name="sexo_fiador_1" value=" el/la senor/senora"></label><br>
+    <label>Sexo del segundo fiador: <input type="text" name="sexo_fiador_2" value="el/la senor/senora"></label><br>
+    <label>Nombre del primer fiador: <input type="text" name="nombre_fiador_1" value="JORGE ROBLES"></label><br>
+    <label>Nombre del segundo fiador: <input type="text" name="nombre_fiador_2" value="MARIA DEL VALLE"></label><br>
+    <label>DNI del primer fiador: <input type="text" name="dni_fiador_1" value="43.555.623"></label><br>
+    <label>DNI del segundo fiador: <input type="text" name="dni_fiador_2" value="23.345.613"></label><br>
+    <label>Calle del primer fiador: <input type="text" name="calle_fiador_1" value="Bahía Packewaia N°3767 depto A"></label><br>
+    <label>Calle del segundo fiador: <input type="text" name="calle_fiador_2" value="San Martin N°412 depto B"></label><br>
+    <label>Ciudad del primer fiador: <input type="text" name="ciudad_fiador_1" value="Ushuaia"></label><br>
+    <label>Ciudad del segundo fiador: <input type="text" name="ciudad_fiador_2" value="Ushuaia"></label><br>
+    <label>Provincia del primer fiador: <input type="text" name="provincia_fiador_1" value="Tierra del fuego"></label><br>
+    <label>Provincia del segundo fiador: <input type="text" name="provincia_fiador_2" value="Tierra del fuego"></label><br>
+    <label>Mail del primer fiador: <input type="text" name="mail_fiador1" value="pepito@gmail.com"></label><br>
+    <label>Mail del segundo fiador: <input type="text" name="mail_fiador2" value="pepito@gmail.com"></label><br>
+
+    <h3>Firma de 3 copias(fecha)</h3>
+    <label>Dia(numerico): <input type="text" name="dia_firma" value="23"></label><br>
+    <label>Mes(escrito): <input type="text" name="mes_firma" value="enero"></label><br>
+    <label>Anio(numerico): <input type="text" name="anio_firma" value="2026"></label><br>
+
+
+
+
+
+    <h3>Cláusulas adicionales</h3>
+    <div id="clausulasContainer">
+      <div>
+        <input type="text" name="numero" placeholder="Número" value="1">
+        <input type="text" name="texto" placeholder="Texto de cláusula" value="El inquilino no podrá subarrendar la propiedad.">
+      </div>
+    </div>
+    <button type="button" onclick="agregarClausula()">Agregar cláusula</button><br><br>
+
+    <button type="submit">Generar DOCX</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

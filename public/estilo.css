@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fondo general */
+body {
+  background: #f4f6f8;
+  margin: 0;
+  padding: 30px;
+  color: #333;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Formulario */
+form {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Títulos de secciones */
+h3 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e3e6ea;
+  color: #2c3e50;
+}
+
+/* Labels + inputs */
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* Inputs */
+input {
+  margin-top: 5px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+/* Focus (cuando escribís) */
+input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.15);
+}
+
+/* Placeholder */
+input::placeholder {
+  color: #9aa0a6;
+  font-style: italic;
+}
+
+/* Contenedor de cláusulas */
+#clausulasContainer > div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Inputs de cláusulas */
+#clausulasContainer input {
+  flex: 1;
+}
+
+/* Botones */
+button {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #2f89c6;
+}
+
+/* Botón generar */
+button[type="submit"] {
+  margin-top: 25px;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px;
+}
