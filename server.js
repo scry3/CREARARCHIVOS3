@@ -16,19 +16,19 @@ app.post('/generar', async (req, res) => {
         description: "Contrato generado automáticamente",
 
         styles: {
-                paragraphStyles: [
-                    {
-                        id: "TituloNegrita",
-                        name: "Título Negrita",
-                        basedOn: "Heading1",
-                        next: "Normal",
-                        run: {
-                            bold: true,
-                            color: "000000", // opcional: negro
-                            size: 25         // opcional: tamaño similar a Heading1
-                        }
+            paragraphStyles: [
+                {
+                    id: "TituloNegrita",
+                    name: "Título Negrita",
+                    basedOn: "Heading1",
+                    next: "Normal",
+                    run: {
+                        bold: true,
+                        color: "000000", // opcional: negro
+                        size: 25         // opcional: tamaño similar a Heading1
                     }
-                ]
+                }
+            ]
         },
 
         sections: [
@@ -77,7 +77,7 @@ app.post('/generar', async (req, res) => {
                         style: "TituloNegrita",
                         spacing: { after: 300 }
                     }),
-                    new Paragraph(`Las partes acuerdan que realizarán aumentos ${data.tipo_actualizacion} al valor locativo, utilizando el Índice de Precios al Consumidor (IPC) publicado por el Instituto Nacional de Estadísticas y Censos (INDEC); El precio del alquiler mensual será de ${data.precio_escrito}($${data.precio_numerico}.-) durante los primeros ${data.tiempo_precio_escrito}${data.tiempo_precio_numerico} meses del contrato, desde el ${data.fecha_inicio}  hasta el ${data.fecha_final_1er_precio}. A partir del ${data.fecha_actualizacion_alquiler} el alquiler mensual se actualizará ${data.tipo_actualizacion} utilizando el Índice de Precios al Consumidor (IPC) publicado por el Instituto Nacional de Estadísticas y Censos (INDEC) tal cual lo acordado en la presente cláusula. El LOCADOR realizará el cálculo indexatorio con una anticipación de DIEZ (10) días al vencimiento del primer mes de cada aumento nuevo, tomando al efecto el último índice mensual (IPC) publicado por el INDEC correspondiente al mes anterior en que deba aplicarse el incremento cuatrimestral. El LOCADOR informará el nuevo valor del alquiler al LOCATARIO por vía electrónica, al menos diez (10) días antes que venza el alquiler del mes. Si a la fecha de vencimiento del pago mensual estipulada no se hubiese efectuado aún la publicación respectiva, el LOCATARIO ingresará el monto que venía abonando durante los meses anteriores en modo mensual y con carácter provisorio, debiendo integrar la diferencia que surja de la aplicación de dicho índice dentro de las cuarenta y ocho (48) horas hábiles posteriores contadas desde la fecha que resulte publicado el mismo. A su vez, junto al pago del alquiler, el LOCATARIO abonará los gastos y servicios administrativos inmobiliarios mensuales equivalentes al dos por ciento (2%) calculados sobre el alquiler vigente. Si correspondiera tributar el Impuesto al Valor agregado (IVA) será siempre a cargo del LOCATARIO.`),
+                    new Paragraph(`Las partes acuerdan que realizarán aumentos ${data.tipo_actualizacion} al valor locativo, utilizando el Índice de Precios al Consumidor (IPC) publicado por el Instituto Nacional de Estadísticas y Censos (INDEC); El precio del alquiler mensual será de ${data.precio_escrito}($${data.precio_numerico}.-) durante los primeros ${data.tiempo_precio_escrito} (${data.tiempo_precio_numerico}) meses del contrato, desde el ${data.fecha_inicio}  hasta el ${data.fecha_final_1er_precio}. A partir del ${data.fecha_final_1er_precio} el alquiler mensual se actualizará ${data.tipo_actualizacion} utilizando el Índice de Precios al Consumidor (IPC) publicado por el Instituto Nacional de Estadísticas y Censos (INDEC) tal cual lo acordado en la presente cláusula. El LOCADOR realizará el cálculo indexatorio con una anticipación de DIEZ (10) días al vencimiento del primer mes de cada aumento nuevo, tomando al efecto el último índice mensual (IPC) publicado por el INDEC correspondiente al mes anterior en que deba aplicarse el incremento cuatrimestral. El LOCADOR informará el nuevo valor del alquiler al LOCATARIO por vía electrónica, al menos diez (10) días antes que venza el alquiler del mes. Si a la fecha de vencimiento del pago mensual estipulada no se hubiese efectuado aún la publicación respectiva, el LOCATARIO ingresará el monto que venía abonando durante los meses anteriores en modo mensual y con carácter provisorio, debiendo integrar la diferencia que surja de la aplicación de dicho índice dentro de las cuarenta y ocho (48) horas hábiles posteriores contadas desde la fecha que resulte publicado el mismo. A su vez, junto al pago del alquiler, el LOCATARIO abonará los gastos y servicios administrativos inmobiliarios mensuales equivalentes al dos por ciento (2%) calculados sobre el alquiler vigente. Si correspondiera tributar el Impuesto al Valor agregado (IVA) será siempre a cargo del LOCATARIO.`),
 
                     new Paragraph(" "),
                     new Paragraph({
@@ -85,8 +85,35 @@ app.post('/generar', async (req, res) => {
                         style: "TituloNegrita",
                         spacing: { after: 300 }
                     }),
-                    new Paragraph(`El pago del alquiler mensual será efectuado por el LOCATARIO por mes adelantado del primero al diez de cada mes, de acuerdo con forma de pago a convenir con el LOCADOR, cualquier modificación en el domicilio de pago establecido, deberá efectuarse por escrito y con el acuerdo de ambas partes. En el presente contrato se conviene entre las partes que el pago del monto del alquiler será abonado en xxxxxxxxxxx, sita en la calle xxxxxxxxxxx, de esta ciudad de Ushuaia, Provincia de Tierra del Fuego o mediante la acreditación de la suma correspondiente en la Cuenta Corriente en pesos N° xxxxxxxxxxx, Sucursal de Ushuaia, a nombre de xxxxxxxxxxx, CUIT xxxxxxxxxxx, o por transferencia bancaria en la cuenta mencionada cuyo CBU es N° xxxxxxxxxxx, debiendo informar el depósito o la transferencia realizada al correo electrónico xxxxxxxxxxx. El LOCADOR faculta en este acto a xxxxxxxxxxx, DNI Nº xxxxxxxxxxx, al cobro de los alquileres mensuales y a extender los recibos correspondientes por cuenta y orden del LOCADOR. Asimismo, podrá revisar la UNIDAD LOCADA, previa comunicación con cuarenta y ocho (48) horas de anticipación al LOCATARIO, o cualquier acto que sea menester para llevar a cabo el control y cuidado de la propiedad, y ejecutar todos los actos necesarios para exigir y cumplir el presente contrato, tanto en derechos como en obligaciones. El precio de la locación es por mes completo, por lo que el LOCADOR no está obligado a recibir ni devolver fracciones por día en que el LOCATARIO no use la UNIDAD LOCADA, y aunque el LOCATARIO se mudara o retirara antes de finalizar el mes, pagará íntegramente el alquiler correspondiente a ese mes. Si el último día de pago fuere inhábil o feriado, deberá abonar el día hábil inmediato posterior, correspondiendo su pago posterior con los intereses pactados.`),
-                
+                    new Paragraph(`El canon locativo mensual será abonado por EL LOCATARIO por mes adelantado, dentro del plazo comprendido entre el día primero (1°) y el día diez (10) de cada mes, conforme la modalidad de pago convenida con EL LOCADOR.`),
+
+                    new Paragraph(`Toda modificación respecto del domicilio o modalidad de pago deberá ser notificada por escrito y contar con el acuerdo expreso de ambas partes.`),
+
+                    new Paragraph(`En el presente contrato se establece que el pago del alquiler será efectuado mediante transferencia bancaria a favor de EL LOCADOR, a la siguiente cuenta:`),
+
+                    new Paragraph(`Tipo de cuenta: ${data.tipoCuentaBancaria_locador}`),
+                    new Paragraph(`N° de cuenta: ${data.numeroCuentaBancaria_locador}`),
+                    new Paragraph(`Banco: ${data.Banco_locador}`),
+                    new Paragraph(`Titular: ${data.nombre_locador}`),
+                    new Paragraph(`CUIT: ${data.cuil_locador}`),
+                    new Paragraph(`CBU: ${data.cbu_locador}`),
+                    new Paragraph(`Alias: ${data.alias_locador}`),
+
+                    new Paragraph(`EL LOCATARIO deberá informar cada transferencia realizada a los siguientes correos electrónicos:`),
+
+                    new Paragraph(`${data.mail_locador}`),
+
+                    new Paragraph(`ushuaiarentaltdf@gmail.com`),
+
+                    new Paragraph(`EL LOCADOR faculta expresamente a Sur Gestiones a extender los recibos correspondientes por cuenta y orden del mismo.`),
+
+                    new Paragraph(`Asimismo, EL LOCADOR, por sí o a través de la administradora designada, podrá inspeccionar la UNIDAD LOCADA, previa comunicación al LOCATARIO con una antelación mínima de cuarenta y ocho (48) horas, a los fines de verificar el estado de conservación del inmueble o realizar cualquier acto necesario vinculado al control, mantenimiento o cumplimiento del presente contrato.`),
+
+                    new Paragraph(`El precio de la locación se pacta por mes completo, no encontrándose EL LOCADOR obligado a recibir pagos proporcionales ni a efectuar devoluciones por fracciones de mes no utilizadas. En consecuencia, aun cuando EL LOCATARIO desocupara la unidad con anterioridad a la finalización del período mensual, deberá abonar íntegramente el alquiler correspondiente.`),
+
+                    new Paragraph(`Si el último día de pago resultare inhábil o feriado, el mismo deberá efectuarse el día hábil inmediato posterior, devengándose intereses por mora en caso de incumplimiento conforme lo pactado en el presente contrato.`),
+
+
                     new Paragraph(" "),
                     new Paragraph({
                         text: "QUINTA - MORA:",
@@ -94,7 +121,7 @@ app.post('/generar', async (req, res) => {
                         spacing: { after: 300 }
                     }),
                     new Paragraph(`En caso de mora en el pago de los alquileres o demás obligaciones dinerarias del LOCATARIO, éste pagará al LOCADOR un interés resarcitorio por el monto debido cobrándose intereses por mora diaria a partir del primer día del mes impago; a los efectos del cálculo de los intereses correspondientes, se aplicará un interés punitorio diario del cero punto cinco por ciento (0,5%) sobre el valor del alquiler mensual. Si la mora supera los sesenta (60) días, se podrá pedir al LOCATARIO el desalojo inmediato de la UNIDAD LOCADA, conforme lo determina el Artículo 1.219 y 1.222 del Código Civil y Comercial de la Nación, quedando rescindido el presente contrato de pleno derecho y facultado el LOCADOR para ejercer todos los derechos y acciones que la ley o este contrato le confieran, particularmente para considerar unilateralmente rescindido el presente contrato mediante simple comunicación en tal sentido y exigir el inmediato desalojo y restitución de la UNIDAD LOCADA. Los gastos correspondientes que ocasione la demanda judicial serán soportados en su totalidad por el LOCATARIO y deberá pagar los daños y perjuicios ocasionados desde la mora en el cumplimiento de las obligaciones, y no desde la notificación de la demanda.`),
-                
+
                     new Paragraph(" "),
                     new Paragraph({
                         text: "SEXTA - RESTITUCIÓN:",
@@ -102,7 +129,7 @@ app.post('/generar', async (req, res) => {
                         spacing: { after: 300 }
                     }),
                     new Paragraph(`EL LOCATARIO asume la obligación de restituir la UNIDAD LOCADA en el mismo estado en que la recibió conforme a lo estipulado en la CLÁUSULA- PRIMERA del presente contrato, ya sea por finalización del contrato, o por rescisión anticipada, con más las mejoras edilicias realizadas durante la locación, salvo los deterioros sufridos por el buen uso y transcurso del tiempo, en caso contrario deberá responder por los daños y perjuicios originados por su actuar. Se conviene entre las partes que al momento de la restitución de la UNIDAD LOCADA el LOCATARIO deberá abonar al LOCADOR los materiales necesarios para realizar la pintura total de la vivienda (pintura de primera calidad marca ${data.marca_pintura}), como así también la mano de obra profesional, para esto las partes acuerdan en solicitar tres (3) presupuestos de pintores profesionales promediando los mismos, en el caso que el LOCATARIO no cumpla con lo acordado deberá pagar una Cláusula Penal diaria equivalente al TREINTA POR CIENTO (30%) calculado sobre el alquiler vigente (Artículo 790 y ss., Código Civil y Comercial de la Nación) en forma diaria hasta la devolución de la UNIDAD LOCADA en las condiciones pactadas. También deberá presentar las correspondientes libres deudas de los servicios que tomó  a su cargo (luz, agua, gas y tasas) a través de los organismos pertinentes, caso contrario y hasta tanto dé cumplimiento de los requisitos exigidos por el presente contrato, deberá seguir abonando los alquileres y recargos que puedan corresponder. El LOCATARIO deberá presentar al momento de la restitución de la UNIDAD LOCADA, los servicios de mantenimiento realizados a los artefactos a gas por gasista matriculado y a la caldera por técnico calderista. En el caso que el LOCATARIO dejará la UNIDAD LOCADA abandonada o depositara judicialmente las llaves, se compromete a pagar el alquiler hasta el día en que el Juzgado restituya la posesión de la UNIDAD LOCADA al LOCADOR, completamente desocupado y de conformidad. El único instrumento válido para acreditar fehacientemente la restitución de la UNIDAD LOCADA, será el emanado exclusivamente por el LOCADOR.`),
-                
+
                     new Paragraph(" "),
                     new Paragraph({
                         text: "SÉPTIMA - MODIFICACIONES Y MEJORAS:",
@@ -110,7 +137,7 @@ app.post('/generar', async (req, res) => {
                         spacing: { after: 300 }
                     }),
                     new Paragraph(`Queda prohibida toda modificación o mejoras voluntarias en la UNIDAD LOCADA salvo las permitidas por el LOCADOR de forma fehaciente. El LOCATARIO libera al LOCADOR del pago de cualquier mejora, aún si la misma fuera necesaria o urgente, la tomará a su exclusivo cargo y la dejará en beneficio de la UNIDAD LOCADA sin indemnización, desde el momento mismo de su construcción o incorporación. Asimismo, pagará también el arreglo de cualquier avería que acaeciere, siempre y cuando le corresponda, renunciando al derecho de repetición contra el LOCADOR. A todos los efectos el LOCATARIO renuncia a la facultad de retención por eventuales mejoras que le otorgan los artículos 1.226 y 2.587 del Código Civil y Comercial de la Nación.`),
-                    
+
                     new Paragraph(" "),
                     new Paragraph({
                         text: "OCTAVA - INTRANSFERIBILIDAD:",
@@ -134,7 +161,7 @@ app.post('/generar', async (req, res) => {
                         spacing: { after: 300 }
                     }),
                     new Paragraph(`Por imperio del artículo 262 del DNU N° 70/2.023 el LOCATARIO tiene la facultad de "resolución anticipada" y podrá ejercerla en cualquier momento abonando el equivalente al DIEZ POR CIENTO (10%) del saldo del canon locativo futuro, calculado desde la fecha de notificación de la rescisión hasta la fecha de finalización pactada en el contrato. EL LOCATARIO notificará en forma fehaciente su resolución al LOCADOR con una antelación mínima de diez (10) días a la fecha en que restituirá la UNIDAD LOCADA.`),
-                
+
                     new Paragraph(" "),
                     new Paragraph({
                         text: "DÉCIMA PRIMERA - DAÑOS:",
@@ -308,5 +335,5 @@ app.post('/generar', async (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
