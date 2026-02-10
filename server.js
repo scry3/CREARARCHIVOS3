@@ -91,6 +91,8 @@ app.post('/generar', async (req, res) => {
 
                     new Paragraph(`En el presente contrato se establece que el pago del alquiler será efectuado mediante transferencia bancaria a favor de EL LOCADOR, a la siguiente cuenta:`),
 
+                    new Paragraph(" "),
+
                     new Paragraph(`Tipo de cuenta: ${data.tipoCuentaBancaria_locador}`),
                     new Paragraph(`N° de cuenta: ${data.numeroCuentaBancaria_locador}`),
                     new Paragraph(`Banco: ${data.Banco_locador}`),
@@ -99,7 +101,11 @@ app.post('/generar', async (req, res) => {
                     new Paragraph(`CBU: ${data.cbu_locador}`),
                     new Paragraph(`Alias: ${data.alias_locador}`),
 
+                    new Paragraph(" "),
+
                     new Paragraph(`EL LOCATARIO deberá informar cada transferencia realizada a los siguientes correos electrónicos:`),
+
+                    new Paragraph(" "),
 
                     new Paragraph(`${data.mail_locador}`),
 
