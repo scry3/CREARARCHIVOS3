@@ -1,105 +1,150 @@
-/* Reset básico */
+/* ============================= */
+/* RESET Y VARIABLES GLOBALES */
+/* ============================= */
+
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Fondo general */
-body {
-  background: #f4f6f8;
-  margin: 0;
-  padding: 30px;
-  color: #333;
+:root {
+  --bg-main: #0f172a;          /* fondo azul noche */
+  --bg-form: #111827;          /* fondo formulario */
+  --text-main: #e5e7eb;        /* texto claro */
+  --border-dark: #1f2937;
+
+  --amarillo: #facc15;
+  --azul: #3b82f6;
+  --verde: #22c55e;
+  --violeta: #a855f7;
+  --naranja: #f97316;
 }
 
-/* Título principal */
+/* ============================= */
+/* BODY */
+/* ============================= */
+
+body {
+  background: var(--bg-main);
+  margin: 0;
+  padding: 40px 20px;
+  color: var(--text-main);
+}
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+
 h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  font-weight: 600;
 }
 
-/* Formulario */
+/* ============================= */
+/* FORMULARIO */
+/* ============================= */
+
 form {
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background: var(--bg-form);
+  padding: 40px;
+  border-radius: 14px;
+  border: 1px solid var(--border-dark);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Títulos de secciones */
+/* ============================= */
+/* BLOQUES DE SECCIÓN */
+/* ============================= */
+
+.bloque {
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  background: #0b1220;
+  border-left: 6px solid;
+  transition: transform 0.2s ease;
+}
+
+.bloque:hover {
+  transform: translateY(-3px);
+}
+
+/* Colores individuales */
+
+.bloque-1 { border-color: var(--amarillo); }
+.bloque-2 { border-color: var(--azul); }
+.bloque-3 { border-color: var(--verde); }
+.bloque-4 { border-color: var(--violeta); }
+.bloque-5 { border-color: var(--naranja); }
+
+/* ============================= */
+/* TÍTULOS DE SECCIÓN */
+/* ============================= */
+
 h3 {
-  margin-top: 35px;
-  margin-bottom: 15px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #e3e6ea;
-  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
-/* Labels + inputs */
+/* ============================= */
+/* LABELS E INPUTS */
+/* ============================= */
+
 label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   font-size: 14px;
+  color: #cbd5e1;
 }
 
-/* Inputs */
 input {
-  margin-top: 5px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #0f172a;
+  color: #e5e7eb;
   font-size: 14px;
-  transition: border 0.2s, box-shadow 0.2s;
+  transition: all 0.2s ease;
 }
 
-/* Focus (cuando escribís) */
+/* Focus moderno */
+
 input:focus {
   outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.15);
+  border-color: var(--azul);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
 }
 
-/* Placeholder */
-input::placeholder {
-  color: #9aa0a6;
-  font-style: italic;
-}
+/* ============================= */
+/* BOTONES */
+/* ============================= */
 
-/* Contenedor de cláusulas */
-#clausulasContainer > div {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-/* Inputs de cláusulas */
-#clausulasContainer input {
-  flex: 1;
-}
-
-/* Botones */
 button {
-  background: #3498db;
-  color: #fff;
+  background: var(--azul);
+  color: white;
   border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
+  padding: 10px 18px;
+  border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
 }
 
 button:hover {
-  background: #2f89c6;
+  background: #2563eb;
+  transform: translateY(-2px);
 }
 
-/* Botón generar */
 button[type="submit"] {
-  margin-top: 25px;
+  margin-top: 30px;
   width: 100%;
   font-size: 16px;
-  padding: 12px;
+  padding: 14px;
 }

@@ -10,7 +10,7 @@
 
   <form id="contratoForm">
 
-    
+    <div class="bloque bloque-1">
     <h3>Datos del LOCADOR</h3>
     <label>Nombre: <input type="text" name="nombre_locador" value="Jimena Alejandra Lopez"></label><br>
     
@@ -27,8 +27,9 @@
     <label>Banco: <input type="text" name="Banco_locador" value="Banco Santander - sucursal Ushuaia"></label><br>
     <label>CBU: <input type="text" name="cbu_locador" value="123456839403"></label><br>
     <label>Alias: <input type="text" name="alias_locador" value="BACHE.POZO.MUNI"></label><br>
-    
+    </div>
 
+    <div class="bloque bloque-2">
     <h3>Datos del LOCATARIO</h3>
     <label>Nombre: <input type="text" name="nombre_inquilino" value="Alberto Fabian Dominguez"></label><br>
     
@@ -39,7 +40,9 @@
     <label>Ciudad: <input type="text" name="ciudad_inquilino" value="Ushuaia"></label><br>
     <label>Provincia: <input type="text" name="provincia_inquilino" value="Tierra del Fuego"></label><br>
     <label>Mail: <input type="text" name="mail_inquilino" value="pepito@gmail.com"></label><br>
+    </div>
 
+    <div class="bloque bloque-3">
     <h3>Datos del INMUEBLE</h3>
     <label>Dirección: <input type="text" name="direccion_inmueble" value="Primer Argentino 1456"></label><br>
     <label>Ciudad: <input type="text" name="ciudad_inmueble" value="Ushuaia"></label><br>
@@ -66,13 +69,17 @@
     <label>0,5% del total del alquiler(sellado)(numerico): <input type="text" name="precio_cerocinco_num" value="500.000"></label><br>
     <label>total del alquiler(en letras): <input type="text" name="precio_total_letra" value="un millon de pesos argentinos"></label><br>
     <label>total del alquiler(numerico): <input type="text" name="precio_total_num" value="500.000"></label><br>
+      </div>
 
+    <div class="bloque bloque-4">
     <h3>Forma de pago</h3>
 
     <h3>Pago y deposito en garantia</h3>
     <label>Mes de contrato(escrito): <input type="text" name="mes_escrito" value="ENERO"></label><br>
     <label>AÑo de contrato(numerico): <input type="text" name="anio_inicio_escrito" value="2025"></label><br>
+      </div>
 
+      <div class="bloque bloque-1">
     <h3>Fiadores</h3>
     <label>Sexo del primer fiador: <input type="text" name="sexo_fiador_1" value=" el/la senor/senora"></label><br>
     <label>Sexo del segundo fiador: <input type="text" name="sexo_fiador_2" value="el/la senor/senora"></label><br>
@@ -88,7 +95,7 @@
     <label>Provincia del segundo fiador: <input type="text" name="provincia_fiador_2" value="Tierra del fuego"></label><br>
     <label>Mail del primer fiador: <input type="text" name="mail_fiador1" value="pepito@gmail.com"></label><br>
     <label>Mail del segundo fiador: <input type="text" name="mail_fiador2" value="pepito@gmail.com"></label><br>
-
+        </div>
     <h3>Firma de 3 copias(fecha)</h3>
     <label>Dia(numerico): <input type="text" name="dia_firma" value="23"></label><br>
     <label>Mes(escrito): <input type="text" name="mes_firma" value="enero"></label><br>
@@ -96,16 +103,7 @@
 
 
 
-
-
-    <h3>Cláusulas adicionales</h3>
-    <div id="clausulasContainer">
-      <div>
-        <input type="text" name="numero" placeholder="Número" value="1">
-        <input type="text" name="texto" placeholder="Texto de cláusula" value="El inquilino no podrá subarrendar la propiedad.">
-      </div>
-    </div>
-    <button type="button" onclick="agregarClausula()">Agregar cláusula</button><br><br>
+<button type="button" onclick="agregarClausula()">Agregar cláusula</button><br><br>
 
     <button type="submit">Generar DOCX</button>
   </form>
