@@ -41,10 +41,10 @@ app.post('/generar', async (req, res) => {
                     }),
 
                     new Paragraph(
-                        `Entre la Señora ${data.nombre_locador}, de nacionalidad ${data.nacionalidad_locador}, quien acredita su identidad con DNI N° ${data.dni_locador}, CUIL N° ${data.cuil_locador}, con domicilio en la calle ${data.direccion_locador}, de la localidad de ${data.localidad_locador}, Provincia de ${data.provincia_locador}, quien en adelante será denominado "LOCADOR", por una parte;`
+                        `Entre la parte LOCADORA ${data.nombre_locador}, de nacionalidad ${data.nacionalidad_locador}, quien acredita su identidad con DNI N° ${data.dni_locador}, CUIL N° ${data.cuil_locador}, con domicilio en la calle ${data.direccion_locador}, de la localidad de ${data.localidad_locador}, Provincia de ${data.provincia_locador}, quien en adelante será denominado "LOCADOR", por una parte;`
                     ),
                     new Paragraph(
-                        `Y por la otra el Señor ${data.nombre_inquilino}, de nacionalidad ${data.nacionalidad_inquilino}, quien acredita su identidad con DNI N° ${data.dni_inquilino}, CUIL N° ${data.cuil_inquilino}, domiciliado en la calle ${data.direccion_inquilino}, de la ciudad de ${data.ciudad_inquilino}, Provincia de ${data.provincia_inquilino}, quien en adelante será denominado "la parte LOCATARIA", y juntamente con la parte LOCADORA se denominarán "LAS PARTES", celebran el presente Contrato de Locación con Cláusula de Venta, en adelante denominado CONTRATO, sujeto al Código Civil y Comercial, Leyes vigentes, Decreto de Necesidad y Urgencia (DNU) N° 70/2.023, y a las declaraciones y cláusulas siguientes:`
+                        `Y por la otra, la parte LOCATARIA ${data.nombre_inquilino}, de nacionalidad ${data.nacionalidad_inquilino}, quien acredita su identidad con DNI N° ${data.dni_inquilino}, CUIL N° ${data.cuil_inquilino}, domiciliado en la calle ${data.direccion_inquilino}, de la ciudad de ${data.ciudad_inquilino}, Provincia de ${data.provincia_inquilino}, quien en adelante será denominado "la parte LOCATARIA", y juntamente con la parte LOCADORA se denominarán "LAS PARTES", celebran el presente Contrato de Locación con Cláusula de Venta, en adelante denominado CONTRATO, sujeto al Código Civil y Comercial, Leyes vigentes, Decreto de Necesidad y Urgencia (DNU) N° 70/2.023, y a las declaraciones y cláusulas siguientes:`
                     ),
                     new Paragraph(" "),
                     new Paragraph({
@@ -53,7 +53,7 @@ app.post('/generar', async (req, res) => {
                         spacing: { after: 300 }
                     }),
                     new Paragraph(
-                        `la parte LOCADORA da en locación a la parte LOCATARIA un inmueble de su propiedad, ubicado en la calle ${data.direccion_inmueble} de la ciudad de ${data.ciudad_inmueble}, provincia de ${data.provincia_inmueble}, en adelante denominada "UNIDAD LOCADA", compuesta de la siguiente forma: ${data.descripcion_inmueble}.`
+                        `La parte LOCADORA da en locación a la parte LOCATARIA un inmueble de su propiedad, ubicado en la calle ${data.direccion_inmueble} de la ciudad de ${data.ciudad_inmueble}, provincia de ${data.provincia_inmueble}, en adelante denominada "UNIDAD LOCADA", compuesta de la siguiente forma: ${data.descripcion_inmueble}.`
                     ),
                     new Paragraph(
                         `la parte LOCATARIA declara haber visitado y examinado el inmueble que alquilará, manifestando que el mismo se encuentra en muy buen estado de conservación y aseo, recientemente pintado con pintura marca "${data.marca_pintura}" y con mano de obra profesional.`
