@@ -219,7 +219,7 @@ app.post('/generar', async (req, res) => {
                     new Paragraph(`La parte LOCADORA: Con domicilio en calle ${data.direccion_locador}, localidad ${data.localidad_locador}, provincia de ${data.provincia_locador}, y correo electrónico  ${data.mail_locador}`),
                     new Paragraph(`La parte LOCATARIA: Con domicilio en calle ${data.direccion_inquilino}, ciudad de ${data.ciudad_inmueble}, provincia de ${data.provincia_inmueble}, y correo electrónico ${data.mail_inquilino}`),
                     new Paragraph(`El FIADOR ${data.nombre_fiador_1} : Con domicilio en calle ${data.calle_fiador_1}, ciudad de ${data.ciudad_fiador_1}, provincia de ${data.provincia_fiador1}, y correo electrónico  ${data.mail_fiador1}`),
-                    new Paragraph(`El FIADOR BELIU RODRIGO MIGUEL : Con domicilio en calle ${data.calle_fiador_2}, ciudad de ${data.ciudad_fiador_2}, provincia de ${data.provincia_fiador2}, y correo electrónico ${data.mail_fiador2} `),
+                    new Paragraph(`El FIADOR ${data.nombre_fiador_2} : Con domicilio en calle ${data.calle_fiador_2}, ciudad de ${data.ciudad_fiador_2}, provincia de ${data.provincia_fiador2}, y correo electrónico ${data.mail_fiador2} `),
                     new Paragraph(`Las partes aceptan que toda notificación cursada a los domicilios o correos electrónicos aquí indicados será plenamente válida, aunque los interesados no residan o no se encuentren en ellos, salvo que hayan notificado fehacientemente a las demás partes un nuevo domicilio físico o electrónico.`),
 
                     new Paragraph(" "),
